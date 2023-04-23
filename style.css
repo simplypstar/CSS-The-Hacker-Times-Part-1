@@ -1,5 +1,7 @@
+/* import the fonts needed for the page */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap');
 
+/* change the font xsize for the date in the upper left /*
 .date {
   font-size: 0.55em;
 }
