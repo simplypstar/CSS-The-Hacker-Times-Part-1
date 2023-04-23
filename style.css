@@ -1,11 +1,12 @@
-/* import the fonts needed for the page */
+/* import fonts needed for this page */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap');
 
-/* change the font xsize for the date in the upper left /*
+/* change the font size for the date in the upper left corner */
 .date {
   font-size: 0.55em;
 }
 
+/* set the newspaper container to display as a block, set the width, background color, margins padding, add a box shadow and make the edges rounded */
 .newspaper-container {
   display: block;
   width: 700px;
@@ -16,12 +17,14 @@
   border-radius: 10px;
 }
 
+/* configure the page header */
 h1 {
   Font-family: 'Abril Fatface';
   font-size: 3em;
   text-align: center; 
  }
 
+/* remove the bullets from the unordered list */
 ul {
   list-style-type: none;
   padding: 0.5em;
@@ -29,35 +32,41 @@ ul {
   border-bottom: 1px solid #eee;
 }
 
+/* set the unordered list as an inline block so it can be used as a menu bar */
 li {
   display: inline-block;
 }
 
+/* remove the underline from the hyperlink and change the color, padding and font size */
 li a {
   text-decoration: none;
   padding: 1em 2em;
   color: #777;
   font-size: 0.55em;  
-}
-
+} 
+/* changed the font and font size for the article title */
 main h2 {
   font-size: 1.5em;
   font-family: 'Roboto Slab';
 }
 
+/* changed the font color for the article's author */
 main h5 {
   color: #dd3232;
 }
 
+/* set the size for the first image */
 main img {
   width: 100%;
   height: auto;
 }
 
+ /* add bottom padding to the p element inside the main element to add space before the separation border */
 main p {
   padding-bottom: 1em;
 }
 
+/* set the section elements as an inline block, set the width, padding and a top border for the section elements */
 section {
   display: inline-block;
   width: 315px;
@@ -65,11 +74,13 @@ section {
   border-top: 1px solid #eee;
 }
 
+/* set the font family and alignment for all p elements */
 p {
   font-family: 'Source Sans Pro';
   text-align: justify;
 }
 
+/* set the background color for the body element */
 body {
   background-color: #eee;
 }
