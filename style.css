@@ -18,39 +18,52 @@
 }
 
 /* configure the page header */
-h1 {
+.newspaper-container h1 {
   Font-family: 'Abril Fatface';
   font-size: 3em;
   text-align: center; 
  }
 
-/* remove the bullets from the unordered list */
-ul {
+/* remove the bullets from the unordered list at the top of the */
+.top-nav ul {
   list-style-type: none;
   padding: 0.5em;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
 
-/* set the unordered list as an inline block so it can be used as a menu bar */
-li {
+/* set the unordered list as an inline block so it can be ued as a menu bar */
+.top-nav ul li {
   display: inline-block;
 }
 
-/* remove the underline from the hyperlink and change the color, padding and font size */
-li a {
+/* remove the underline from the top of page hyperlinks and change the color, padding
+   and font size */
+.top-nav li a {
   text-decoration: none;
   padding: 1em 2em;
   color: #777;
-  font-size: 0.55em;  
-} 
-/* changed the font and font size for the article title */
+  font-size: 0.55em;
+  font-family: "Source Sans Pro";  
+}
+
+/* this section set the menu bar at the top of the screen as sticky so it is always
+  visible even when scrolling down the page */
+.top-nav {
+  position: sticky;
+  top: 0em;
+  left: 1em;
+  z-index: 1;
+  background: white;
+}
+
+/* change the font and font size for the article title */
 main h2 {
   font-size: 1.5em;
   font-family: 'Roboto Slab';
 }
 
-/* changed the font color for the article's author */
+/* change the font color for the atrticle's author */
 main h5 {
   color: #dd3232;
 }
@@ -66,12 +79,73 @@ main p {
   padding-bottom: 1em;
 }
 
-/* set the section elements as an inline block, set the width, padding and a top border for the section elements */
-section {
+/* set the .more-articles section elements as an inline block, set the width, padding 
+   and a top and bottom border for the section elements as a page separator */
+.more-articles section {
   display: inline-block;
   width: 315px;
   padding: 1em;
   border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* set the three-more-articles section elements as an inline block, set the width, padding */
+.three-more-articles section {
+  display: inline-block;
+  width: 197px;
+  padding: 1em;
+}
+
+/* set the height, width  and added a grayscalwe filter for the first set of three 
+  images lined up horizontally at the bottom of the page */
+.three-more-articles img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+/* set up a CSS grid to contain 3 more articles and images */
+.three-grid-articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2em;
+  padding: 1em;
+  border-bottom: 1px solid #eee;
+}
+
+/* set the height, width  and added a grayscalwe filter for the last set of three images lined up horizontally at the bottom of the page */
+.three-grid-articles img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+/* configure the title at the end of the page */
+.page-bottom h4 {
+  Font-family: 'Abril Fatface'; 
+ }
+
+/* remove the bullets from the unordered list used for the bottom of the page */
+.bottom-nav ul {
+  list-style-type: none;
+}
+
+/* remove the underline from bottom page info section the hyperlinks and change
+  the color and font size */
+.bottom-nav li a {
+  text-decoration: none;
+  color: #777;
+  font-size: 0.8em;
+  font-family: "Source Sans Pro";
+  
+}
+
+/* set up a CSS grid to contain the links at the bottom of the page */
+.bottom-nav {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1em;
+  justify-content: start;
 }
 
 /* set the font family and alignment for all p elements */
@@ -80,7 +154,14 @@ p {
   text-align: justify;
 }
 
-/* set the background color for the body element */
+/* set the font to bold and the text alignment for the p element in the column 
+   headers of the bottom info grid  */
+.bottom-nav p {
+  text-align: left;
+  font-weight: bold;
+}
+
+/*  set the background color for the body elemen */
 body {
   background-color: #eee;
 }
